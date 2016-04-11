@@ -1,0 +1,17 @@
+README for Radio REDUX
+
+4/11/16 Zach -------------------------------
+Installed Node.js and learned how to web scrape using Node.js via these resources
+        https://scotch.io/tutorials/scraping-the-web-with-node-js
+        https://www.smashingmagazine.com/2015/04/web-scraping-with-nodejs/
+        
+You don't really need to know how it works, but to run it (which you probably won't need to do), you'll need to install Node.js and its dependencies ("cheerio","request", and "express"). Look up how, it's very simple :)
+
+The file "test2000.json" scrapes song information from "http://www.bobborst.com/popculture/top-100-songs-of-the-year/?year=2000" and outputs a .json file ("test2000.json").
+
+My next steps include creating a json file that includes all years from 1965 to 2015, which shouldn't be too complicated, followed by uploading those files to 
+a database on cscilab via PHP or AJAX so that our web app can use them.
+
+If you have any questions message me on the groupmeee.
+
+P.S. I apologize that all of the dep.'s ended up in github. Oh well.

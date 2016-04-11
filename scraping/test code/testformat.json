@@ -1,0 +1,17 @@
+2000
+2001
+2002
+
+{
+    "year": 2000,
+    {
+        "one": {
+            "artist": "artist",
+            "title": "title"
+        },
+        "two": {
+            "artist": "",
+            "title": ,
+        }
+    }
+}
