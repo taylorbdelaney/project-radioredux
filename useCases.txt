@@ -1,0 +1,35 @@
+1. Enter a year (arg_year)
+	Actor: User
+	Precondition: none
+	Postcondition: Song DB is queried and results are played through audio player
+	Queries:
+		select * from songs where year = arg_year;
+
+2. Listen to music
+	Actor: User
+	Precondition: User must have entered a year
+	Postcondition: none
+	Queries: none
+	
+3. Subscribe
+	Actor: User
+	Precondition: none
+	Postcondition: user added to the user table
+	Queries:
+		insert into users (id, first_name, last_name, email) values (1, 'Steve', 'Boyd', 'sboyd0@altervista.org');
+		
+4. Add Year to Preferences
+	Actor: User
+	Precondition: user must be logged in
+	Postcondition: either a row will be inserted into a preferences table, or a cookie will be set with that preference to load automatically next time
+	Queries:
+		insert into preferences (user_id, song_year) values (current_user, current_year);
+
+5. Email users their songs of the day
+	Actor: Admin
+	Precondition: users must have subscribed to Song of the Day emails
+	Postcondition: email sent to users
+	Queries:
+		select u.email, u.first_name, p.song_year, s.title, s.artist
+		from users as u, preferences as p, songs as s
+		where u.id = p.user_id and p.song_year = s.year;
