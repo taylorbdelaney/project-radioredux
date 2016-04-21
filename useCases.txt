@@ -16,7 +16,7 @@
 	Precondition: none
 	Postcondition: user added to the user table
 	Queries:
-		insert into users (id, first_name, last_name, email) values (1, 'Steve', 'Boyd', 'sboyd0@altervista.org');
+		insert into users (id, registration_date, first_name, last_name, email, password) values (1, NOW(), 'Steve', 'Boyd', 'sboyd0@altervista.org', SHA1('tjlXoP'));
 		
 4. Add Year to Preferences
 	Actor: User
