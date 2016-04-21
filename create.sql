@@ -20,7 +20,7 @@ CREATE TABLE users (
 CREATE TABLE preferences (
 	user_id INT not null,
 	song_year INT not null,
-	FOREIGN KEY (user_id) references user(id);
+	FOREIGN KEY (user_id) references users(id);
 
 ); 
 
