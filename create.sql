@@ -14,7 +14,6 @@ CREATE TABLE users (
 	password CHAR(40) not null,
 	PRIMARY KEY(id),
 	CHECK (id > 0 )
-	
 );
 
 CREATE TABLE preferences (

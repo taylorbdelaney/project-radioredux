@@ -1,0 +1,56 @@
+{
+    "alldata": [
+        {
+            "year": 1965,
+            "database": [
+                {
+                    "rank": "1",
+                    "metadata": {
+                        "title": "Wooly Bully",
+                        "artist": "Sam The Sham and The Pharaohs"
+                    }
+                },
+                {
+                    "rank": "2",
+                    "metadata": {
+                        "title": "I Can&apos;t Help Myself (Sugar Pie Honey Bunch)",
+                        "artist": "Four Tops"
+                    }
+                },
+                {
+                    "rank": "3",
+                    "metadata": {
+                        "title": "(I Can&apos;t Get No) Satisfaction",
+                        "artist": "Rolling Stones"
+                    }
+                }
+            ]
+        },
+        {
+            "year": 1966,
+            "database": [
+                {
+                    "rank": "1",
+                    "metadata": {
+                        "title": "The Ballad Of The Green Berets",
+                        "artist": "Sgt. Barry Sadler"
+                    }
+                },
+                {
+                    "rank": "2",
+                    "metadata": {
+                        "title": "Cherish",
+                        "artist": "Association"
+                    }
+                },
+                {
+                    "rank": "3",
+                    "metadata": {
+                        "title": "(You&apos;re My) Soul And Inspiration",
+                        "artist": "Righteous Brothers"
+                    }
+                }
+            ]
+        }
+    ]
+}

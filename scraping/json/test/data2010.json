@@ -1,0 +1,709 @@
+{
+    "alldata": [
+        {
+            "year": 2010,
+            "database": [
+                {
+                    "rank": "1",
+                    "metadata": {
+                        "title": "TiK ToK",
+                        "artist": "Ke$ha"
+                    }
+                },
+                {
+                    "rank": "2",
+                    "metadata": {
+                        "title": "Need You Now",
+                        "artist": "Lady Antebellum"
+                    }
+                },
+                {
+                    "rank": "3",
+                    "metadata": {
+                        "title": "Hey, Soul Sister",
+                        "artist": "Train"
+                    }
+                },
+                {
+                    "rank": "4",
+                    "metadata": {
+                        "title": "California Gurls",
+                        "artist": "Katy Perry feat. Snoop Dogg"
+                    }
+                },
+                {
+                    "rank": "5",
+                    "metadata": {
+                        "title": "OMG",
+                        "artist": "Usher feat. will.i.am"
+                    }
+                },
+                {
+                    "rank": "6",
+                    "metadata": {
+                        "title": "Airplanes",
+                        "artist": "B.o.B feat. Hayley Williams"
+                    }
+                },
+                {
+                    "rank": "7",
+                    "metadata": {
+                        "title": "Love The Way You Lie",
+                        "artist": "Eminem feat. Rihanna"
+                    }
+                },
+                {
+                    "rank": "8",
+                    "metadata": {
+                        "title": "Bad Romance",
+                        "artist": "Lady Gaga"
+                    }
+                },
+                {
+                    "rank": "9",
+                    "metadata": {
+                        "title": "Dynamite",
+                        "artist": "Taio Cruz"
+                    }
+                },
+                {
+                    "rank": "10",
+                    "metadata": {
+                        "title": "Break Your Heart",
+                        "artist": "Taio Cruz feat. Ludacris"
+                    }
+                },
+                {
+                    "rank": "11",
+                    "metadata": {
+                        "title": "Nothin' On You",
+                        "artist": "B.o.B feat. Bruno Mars"
+                    }
+                },
+                {
+                    "rank": "12",
+                    "metadata": {
+                        "title": "I Like It",
+                        "artist": "Enrique Iglesias feat. Pitbull"
+                    }
+                },
+                {
+                    "rank": "13",
+                    "metadata": {
+                        "title": "Bedrock",
+                        "artist": "Young Money feat. Lloyd"
+                    }
+                },
+                {
+                    "rank": "14",
+                    "metadata": {
+                        "title": "In My Head",
+                        "artist": "Jason Derulo"
+                    }
+                },
+                {
+                    "rank": "15",
+                    "metadata": {
+                        "title": "Rude Boy",
+                        "artist": "Rihanna"
+                    }
+                },
+                {
+                    "rank": "16",
+                    "metadata": {
+                        "title": "Telephone",
+                        "artist": "Lady Gaga feat. Beyonce"
+                    }
+                },
+                {
+                    "rank": "17",
+                    "metadata": {
+                        "title": "Teenage Dream",
+                        "artist": "Katy Perry"
+                    }
+                },
+                {
+                    "rank": "18",
+                    "metadata": {
+                        "title": "Just The Way You Are",
+                        "artist": "Bruno Mars"
+                    }
+                },
+                {
+                    "rank": "19",
+                    "metadata": {
+                        "title": "Cooler Than Me",
+                        "artist": "Mike Posner"
+                    }
+                },
+                {
+                    "rank": "20",
+                    "metadata": {
+                        "title": "Imma Be",
+                        "artist": "Black Eyed Peas"
+                    }
+                },
+                {
+                    "rank": "21",
+                    "metadata": {
+                        "title": "Empire State of Mind",
+                        "artist": "Jay-Z and Alicia Keys"
+                    }
+                },
+                {
+                    "rank": "22",
+                    "metadata": {
+                        "title": "DJ Got Us Fallin' in Love",
+                        "artist": "Usher feat. Pitbull"
+                    }
+                },
+                {
+                    "rank": "23",
+                    "metadata": {
+                        "title": "Billionaire",
+                        "artist": "Travie McCoy feat. Bruno Mars"
+                    }
+                },
+                {
+                    "rank": "24",
+                    "metadata": {
+                        "title": "Not Afraid",
+                        "artist": "Eminem"
+                    }
+                },
+                {
+                    "rank": "25",
+                    "metadata": {
+                        "title": "Replay",
+                        "artist": "Iyaz"
+                    }
+                },
+                {
+                    "rank": "26",
+                    "metadata": {
+                        "title": "Sexy Chick",
+                        "artist": "David Guetta feat. Akon"
+                    }
+                },
+                {
+                    "rank": "27",
+                    "metadata": {
+                        "title": "Breakeven",
+                        "artist": "Script"
+                    }
+                },
+                {
+                    "rank": "28",
+                    "metadata": {
+                        "title": "Your Love Is My Drug",
+                        "artist": "Ke$ha"
+                    }
+                },
+                {
+                    "rank": "29",
+                    "metadata": {
+                        "title": "I Gotta Feeling",
+                        "artist": "Black Eyed Peas"
+                    }
+                },
+                {
+                    "rank": "30",
+                    "metadata": {
+                        "title": "Fireflies",
+                        "artist": "Owl City"
+                    }
+                },
+                {
+                    "rank": "31",
+                    "metadata": {
+                        "title": "Say Aah",
+                        "artist": "Trey Songz feat. Fabolous"
+                    }
+                },
+                {
+                    "rank": "32",
+                    "metadata": {
+                        "title": "Find Your Love",
+                        "artist": "Drake"
+                    }
+                },
+                {
+                    "rank": "33",
+                    "metadata": {
+                        "title": "Alejandro",
+                        "artist": "Lady Gaga"
+                    }
+                },
+                {
+                    "rank": "34",
+                    "metadata": {
+                        "title": "Ridin' Solo",
+                        "artist": "Jason Derulo"
+                    }
+                },
+                {
+                    "rank": "35",
+                    "metadata": {
+                        "title": "Just A Dream",
+                        "artist": "Nelly"
+                    }
+                },
+                {
+                    "rank": "36",
+                    "metadata": {
+                        "title": "How Low",
+                        "artist": "Ludacris"
+                    }
+                },
+                {
+                    "rank": "37",
+                    "metadata": {
+                        "title": "Like A G6",
+                        "artist": "Far East Movement feat. The Cataracs and Dev"
+                    }
+                },
+                {
+                    "rank": "38",
+                    "metadata": {
+                        "title": "Carry Out",
+                        "artist": "Timbaland feat. Justin Timberlake"
+                    }
+                },
+                {
+                    "rank": "39",
+                    "metadata": {
+                        "title": "Haven't Met You Yet",
+                        "artist": "Michael Buble"
+                    }
+                },
+                {
+                    "rank": "40",
+                    "metadata": {
+                        "title": "Club Can't Handle Me",
+                        "artist": "Flo Rida feat. David Guetta"
+                    }
+                },
+                {
+                    "rank": "41",
+                    "metadata": {
+                        "title": "Down",
+                        "artist": "Jay Sean feat. Lil Wayne"
+                    }
+                },
+                {
+                    "rank": "42",
+                    "metadata": {
+                        "title": "Bulletproof",
+                        "artist": "La Roux"
+                    }
+                },
+                {
+                    "rank": "43",
+                    "metadata": {
+                        "title": "Whatcha Say",
+                        "artist": "Jason Derulo"
+                    }
+                },
+                {
+                    "rank": "44",
+                    "metadata": {
+                        "title": "Baby",
+                        "artist": "Justin Bieber feat. Ludacris"
+                    }
+                },
+                {
+                    "rank": "45",
+                    "metadata": {
+                        "title": "Whataya Want From Me",
+                        "artist": "Adam Lambert"
+                    }
+                },
+                {
+                    "rank": "46",
+                    "metadata": {
+                        "title": "Mine",
+                        "artist": "Taylor Swift"
+                    }
+                },
+                {
+                    "rank": "47",
+                    "metadata": {
+                        "title": "Only Girl (In The World)",
+                        "artist": "Rihanna"
+                    }
+                },
+                {
+                    "rank": "48",
+                    "metadata": {
+                        "title": "Live Like We're Dying",
+                        "artist": "Kris Allen"
+                    }
+                },
+                {
+                    "rank": "49",
+                    "metadata": {
+                        "title": "Hard",
+                        "artist": "Rihanna feat. Jeezy"
+                    }
+                },
+                {
+                    "rank": "50",
+                    "metadata": {
+                        "title": "Young Forever",
+                        "artist": "Jay-Z and Mr. Hudson"
+                    }
+                },
+                {
+                    "rank": "51",
+                    "metadata": {
+                        "title": "Blah Blah Blah",
+                        "artist": "Ke$ha feat. 3OH!3"
+                    }
+                },
+                {
+                    "rank": "52",
+                    "metadata": {
+                        "title": "Bottoms Up",
+                        "artist": "Trey Songz feat. Nicki Minaj"
+                    }
+                },
+                {
+                    "rank": "53",
+                    "metadata": {
+                        "title": "Do You Remember",
+                        "artist": "Jay Sean feat. Sean Paul and Lil Jon"
+                    }
+                },
+                {
+                    "rank": "54",
+                    "metadata": {
+                        "title": "All The Right Moves",
+                        "artist": "OneRepublic"
+                    }
+                },
+                {
+                    "rank": "55",
+                    "metadata": {
+                        "title": "According To You",
+                        "artist": "Orianthi"
+                    }
+                },
+                {
+                    "rank": "56",
+                    "metadata": {
+                        "title": "My Chick Bad",
+                        "artist": "Ludacris feat. Nicki Minaj"
+                    }
+                },
+                {
+                    "rank": "57",
+                    "metadata": {
+                        "title": "You Belong With Me",
+                        "artist": "Taylor Swift"
+                    }
+                },
+                {
+                    "rank": "58",
+                    "metadata": {
+                        "title": "Meet Me Halfway",
+                        "artist": "Black Eyed Peas"
+                    }
+                },
+                {
+                    "rank": "59",
+                    "metadata": {
+                        "title": "Take It Off",
+                        "artist": "Ke$ha"
+                    }
+                },
+                {
+                    "rank": "60",
+                    "metadata": {
+                        "title": "Over",
+                        "artist": "Drake"
+                    }
+                },
+                {
+                    "rank": "61",
+                    "metadata": {
+                        "title": "Animal",
+                        "artist": "Neon Trees"
+                    }
+                },
+                {
+                    "rank": "62",
+                    "metadata": {
+                        "title": "Misery",
+                        "artist": "Maroon 5"
+                    }
+                },
+                {
+                    "rank": "63",
+                    "metadata": {
+                        "title": "Magic",
+                        "artist": "B.o.B feat. Rivers Cuomo"
+                    }
+                },
+                {
+                    "rank": "64",
+                    "metadata": {
+                        "title": "Paparazzi",
+                        "artist": "Lady Gaga"
+                    }
+                },
+                {
+                    "rank": "65",
+                    "metadata": {
+                        "title": "Tie Me Down",
+                        "artist": "New Boyz feat. Ray J"
+                    }
+                },
+                {
+                    "rank": "66",
+                    "metadata": {
+                        "title": "Your Love",
+                        "artist": "Nicki Minaj"
+                    }
+                },
+                {
+                    "rank": "67",
+                    "metadata": {
+                        "title": "Party In The U.S.A.",
+                        "artist": "Miley Cyrus"
+                    }
+                },
+                {
+                    "rank": "68",
+                    "metadata": {
+                        "title": "Deuces",
+                        "artist": "Chris Brown feat. Tyga and Kevin McCall"
+                    }
+                },
+                {
+                    "rank": "69",
+                    "metadata": {
+                        "title": "3",
+                        "artist": "Britney Spears"
+                    }
+                },
+                {
+                    "rank": "70",
+                    "metadata": {
+                        "title": "Impossible",
+                        "artist": "Shontelle"
+                    }
+                },
+                {
+                    "rank": "71",
+                    "metadata": {
+                        "title": "Forever",
+                        "artist": "Drake feat. Kanye West, Lil Wayne and Eminem"
+                    }
+                },
+                {
+                    "rank": "72",
+                    "metadata": {
+                        "title": "Two Is Better Than One",
+                        "artist": "Boys Like Girls feat. Taylor Swift"
+                    }
+                },
+                {
+                    "rank": "73",
+                    "metadata": {
+                        "title": "My First Kiss",
+                        "artist": "3OH!3 feat. Ke$ha"
+                    }
+                },
+                {
+                    "rank": "74",
+                    "metadata": {
+                        "title": "Already Gone",
+                        "artist": "Kelly Clarkson"
+                    }
+                },
+                {
+                    "rank": "75",
+                    "metadata": {
+                        "title": "Rock That Body",
+                        "artist": "Black Eyed Peas"
+                    }
+                },
+                {
+                    "rank": "76",
+                    "metadata": {
+                        "title": "Secrets",
+                        "artist": "OneRepublic"
+                    }
+                },
+                {
+                    "rank": "77",
+                    "metadata": {
+                        "title": "Naturally",
+                        "artist": "Selena Gomez and The Scene"
+                    }
+                },
+                {
+                    "rank": "78",
+                    "metadata": {
+                        "title": "Un-Thinkable (I'm Ready)",
+                        "artist": "Alicia Keyes"
+                    }
+                },
+                {
+                    "rank": "79",
+                    "metadata": {
+                        "title": "All I Do Is Win",
+                        "artist": "DJ Khaled feat. T-Pain, Ludacris, Snoop Dogg and Rick Ross"
+                    }
+                },
+                {
+                    "rank": "80",
+                    "metadata": {
+                        "title": "I Made It (Cash Money Heroes)",
+                        "artist": "Kevin Rudolf feat. Birdman, Jay Sean, and Lil Wayne"
+                    }
+                },
+                {
+                    "rank": "81",
+                    "metadata": {
+                        "title": "Stuck Like Glue",
+                        "artist": "Sugarland"
+                    }
+                },
+                {
+                    "rank": "82",
+                    "metadata": {
+                        "title": "Hey Daddy (Daddy's Home)",
+                        "artist": "Usher feat. Plies"
+                    }
+                },
+                {
+                    "rank": "83",
+                    "metadata": {
+                        "title": "There Goes My Baby",
+                        "artist": "Usher"
+                    }
+                },
+                {
+                    "rank": "84",
+                    "metadata": {
+                        "title": "Today Was A Fairytale",
+                        "artist": "Taylor Swift"
+                    }
+                },
+                {
+                    "rank": "85",
+                    "metadata": {
+                        "title": "Say Something",
+                        "artist": "Timbaland feat. Drake"
+                    }
+                },
+                {
+                    "rank": "86",
+                    "metadata": {
+                        "title": "Sweet Dreams",
+                        "artist": "Beyonce"
+                    }
+                },
+                {
+                    "rank": "87",
+                    "metadata": {
+                        "title": "Use Somebody",
+                        "artist": "Kings of Leon"
+                    }
+                },
+                {
+                    "rank": "88",
+                    "metadata": {
+                        "title": "Undo It",
+                        "artist": "Carrie Underwood"
+                    }
+                },
+                {
+                    "rank": "89",
+                    "metadata": {
+                        "title": "Eenie Meenie",
+                        "artist": "Sean Kingston and Justin Bieber"
+                    }
+                },
+                {
+                    "rank": "90",
+                    "metadata": {
+                        "title": "Right Above It",
+                        "artist": "Lil Wayne feat. Drake"
+                    }
+                },
+                {
+                    "rank": "91",
+                    "metadata": {
+                        "title": "The House That Built Me",
+                        "artist": "Miranda Lambert"
+                    }
+                },
+                {
+                    "rank": "92",
+                    "metadata": {
+                        "title": "If I Die Young",
+                        "artist": "Band Perry"
+                    }
+                },
+                {
+                    "rank": "93",
+                    "metadata": {
+                        "title": "The Only Exception",
+                        "artist": "Paramore"
+                    }
+                },
+                {
+                    "rank": "94",
+                    "metadata": {
+                        "title": "American Honey",
+                        "artist": "Lady Antebellum"
+                    }
+                },
+                {
+                    "rank": "95",
+                    "metadata": {
+                        "title": "King Of Anything",
+                        "artist": "Sara Bareilles"
+                    }
+                },
+                {
+                    "rank": "96",
+                    "metadata": {
+                        "title": "Life After You",
+                        "artist": "Daughtry"
+                    }
+                },
+                {
+                    "rank": "97",
+                    "metadata": {
+                        "title": "Smile",
+                        "artist": "Uncle Kraker"
+                    }
+                },
+                {
+                    "rank": "98",
+                    "metadata": {
+                        "title": "Teach Me How To Dougie",
+                        "artist": "Cali Swag District"
+                    }
+                },
+                {
+                    "rank": "99",
+                    "metadata": {
+                        "title": "Try Sleeping With  A Broken Heart",
+                        "artist": "Alicia Keyes"
+                    }
+                },
+                {
+                    "rank": "100",
+                    "metadata": {
+                        "title": "Lover, Lover",
+                        "artist": "Jerrod Niemann"
+                    }
+                }
+            ]
+        }
+    ]
+}
