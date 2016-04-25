@@ -12,12 +12,11 @@
 <body>
 
 	<div id="top">
-		<form>
-			<input type="text" name="email" value="Email Address" />
-			<input type="text" name="pass" value="Password" />
+		<form name="loginForm">
+			<input type="text" name="email" placeholder="Email Address" />
+			<input type="text" name="pass" placeholder="Password" />
 			<input type="submit" name="login" value="LOGIN" />
-			<br>
-			Don't have a Radio Redux account? <u>Sign Up</u>.
+			<br><p>Don't have a Radio Redux account? <u>Sign Up</u>.</p>
 		</form>
 		
 	</div>
@@ -26,6 +25,16 @@
 		<img class="center" src="img/banner.png" alt="Radio Redux">
 		
 		<div id="musicContainer" class="center">
+			<form name="yearForm">
+				<!-- Note: add in loop / db json link for years -->
+				<select>
+					<option value="1991">1991</option>
+					<option value="1992">1992</option>
+					<option value="1993">1993</option>
+					<option value="1994">1994</option>
+					<option value="1995">1995</option>
+				</select>
+			</form>
 		</div>
 		<div id="controls">
 		</div>
