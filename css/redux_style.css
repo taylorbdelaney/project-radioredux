@@ -1,0 +1,87 @@
+html, div {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	vertical-align:baseline;
+	
+}
+body {
+	background-color:#FFFEF5;
+	line-height:1;
+}
+
+.center {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#top {
+	width:100%;
+	height:60px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	background-color:#544741;
+
+}
+#top form {
+	width:100%;
+	display:block;
+	border:1px solid white;
+	
+}
+#top form {
+	margin:0;
+	display:block;
+	color: #FFFEF5;
+	font-size: 9px;
+	text-align:right;
+	border:1px solid white;
+}
+#main {
+	width:100%;
+	position:absolute;
+	top:60px;
+	bottom:20px;
+	width:93%;
+	left:50%;
+	margin-left:-46.7%;
+	padding-top:65px;
+
+}
+#musicContainer {
+	margin-top:15px;
+	margin-bottom:-35px;
+	width:80%;
+	height:100px;
+	background-color:#FEDD6C;
+	border:33px solid #544741;
+	border-radius:30px;
+
+}
+#controls {
+	margin-bottom:-20px;
+	width:100%;
+	height:160px;
+	background-color:#544741;
+	
+}
+#controlsBottom {
+	width:85%;
+	height:75px;
+	background-color:#CDDBC0;
+	border-radius:5px;
+	
+}
+#bottom {
+	width:100%;
+	height:20px;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	background-color:#544741;
+
+}
