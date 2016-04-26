@@ -13,11 +13,11 @@
 <body>
 
 	<div id="top">
-		<form name="loginForm" action="include/login.php" method="post">
+		<form id="loginForm" name="loginForm" action="include/login.php" method="post">
 			<input type="email" id="email" name="email" placeholder="Email Address" />
 			<input type="password" id="pass" name="pass" placeholder="Password" />
 			<input type="submit" id="login" name="login" value="LOGIN" />
-			<br><p>Don't have a Radio Redux account? <u>Sign Up</u>.</p>
+			<br><a href="account/register.html" target="_self">Don't have a Radio Redux account? <u>Sign Up</u>.</a>
 		</form>
 		
 	</div>
@@ -26,7 +26,7 @@
 		<img class="center" src="img/banner.png" alt="Radio Redux">
 		
 		<div id="musicContainer" class="center">
-			<form name="yearForm">
+			<form id="yearForm" name="yearForm">
 				<!-- Note: add in loop / db json link for years... also is dropdown the best way to do this? -->
 				<select>
 					<option value="1991">1991</option>

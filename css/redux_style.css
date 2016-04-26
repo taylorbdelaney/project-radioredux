@@ -11,57 +11,10 @@ body {
 	background-color:#FFFEF5;
 	line-height:1;
 }
-
-form input[type="password"], form input[type="email"] {
-	width:150px;
-	height:20px;
-	margin-right:5px;
-	padding-left:10px;
-	background:#FFF;
-	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.50);
-	border-radius:3px;
-	border:none;
-	font-family:"Trebuchet MS", Helvetica, sans-serif;
-	font-size:12px;
-	color:#BBBBBB;
-
+a, a:visited {
+	text-decoration:none;
+	color:#FFFEF5;
 }
-form input[type="submit"] {
-	vertical-align:top;
-	width:50px;
-	height:20px;
-	background:#CDDBC0;
-	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.20), inset 0px 2px 0px 0px #FFF;
-	border:none;
-	border-radius:6px;
-	font-family:"TrebuchetMS", Helvetica, sans-serif;
-	/*font-weight:bold;*/
-	font-size:12px;
-	text-align:center;
-	color:#554741;
-	letter-spacing:0px;
-	text-shadow: 0px 1px 0px rgba(255,254,255,0.50);
-
-}
-form select {
-	display:block;
-	margin: 20px auto 0 auto;
-	padding-left:15px;
-	border:7px solid #FFFEF5;
-	border-radius:0;
-	-webkit-appearance:none;
-	-moz-appearance:none;
-	appearance:none;
-	text-indent:0.01px;
-	text-overflow:"";
-	width:170px;
-	height:75px;
-	background:#CDDBC0 url("../img/arrows.png") no-repeat 90% center;
-	font-family:"TrebuchetMS", Helvetica, sans-serif;
-	font-size:50px;
-	color:#544741;
-}
-
 
 .center {
 	display:block;
@@ -106,6 +59,8 @@ form select {
 	background-color:#544741;
 
 }
+
+/* Login Form */
 #top form {
 	margin:15px 35px 0 0;
 	display:block;
@@ -114,9 +69,39 @@ form select {
 	text-align:right;
 	
 }
-#top form p {
-	margin:6px 0 0 0;
+#loginForm input[type="password"], #loginForm input[type="email"] {
+	width:150px;
+	height:20px;
+	margin-right:5px;
+	margin-bottom:6px;
+	padding-left:10px;
+	background:#FFF;
+	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+	border-radius:3px;
+	border:none;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:12px;
+	color:#BBBBBB;
+
 }
+#loginForm input[type="submit"] {
+	vertical-align:top;
+	width:50px;
+	height:20px;
+	margin-bottom:6px;
+	background:#CDDBC0;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.20), inset 0px 2px 0px 0px #FFF;
+	border:none;
+	border-radius:6px;
+	font-family:"TrebuchetMS", Helvetica, sans-serif;
+	/*font-weight:bold;*/
+	font-size:12px;
+	text-align:center;
+	color:#554741;
+	letter-spacing:0px;
+	text-shadow: 0px 1px 0px rgba(255,254,255,0.50);
+}
+
 #main {
 	width:100%;
 	position:absolute;
@@ -132,12 +117,58 @@ form select {
 	margin-top:15px;
 	margin-bottom:-35px;
 	width:80%;
-	height:100px;
+	height:fit-content;
 	background-color:#FEDD6C;
 	border:33px solid #544741;
 	border-radius:30px;
 
 }
+#yearForm select {
+	display:block;
+	margin: 20px auto 0 auto;
+	padding-left:15px;
+	border:7px solid #FFFEF5;
+	border-radius:0;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	text-indent:0.01px;
+	text-overflow:"";
+	width:170px;
+	height:75px;
+	background:#CDDBC0 url("../img/arrows.png") no-repeat 90% center;
+	font-family:"TrebuchetMS", Helvetica, sans-serif;
+	font-size:50px;
+	color:#544741;
+}
+/* Register Form */
+#register {
+	margin:50px 0;
+}
+#register input {
+	display:block;
+	margin-bottom:5px;
+	padding-left:10px;
+	width:20%;
+	height:45px;
+	border:1px solid #544741;
+	font-family: Helvetica, sans-serif;
+	font-size:16px;
+	color:#544741;
+}
+#register input[type="submit"] {
+	height:40px;
+	width:21%;
+	margin-top:10px;
+	background:#CDDBC0;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.20), inset 0px 2px 0px 0px #FFF;
+	border:none;
+	border-radius:2px;
+	letter-spacing:0px;
+	text-shadow: 0px 1px 0px rgba(255,254,255,0.50);
+	font-family:"TrebuchetMS", Helvetica, sans-serif;
+}
+
 #controls {
 	margin-bottom:0px;
 	width:100%;
