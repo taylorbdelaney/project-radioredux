@@ -66,7 +66,7 @@
 			$src .= ($thisone.",");
 		}
 		
-		echo '<iframe id="player" src="'.$src.'" frameborder="0" allowtransparency="true"></iframe>';
+		echo '<iframe id="player" width="640" height="720" src="'.$src.'&view=coverart" frameborder="0" allowtransparency="true"></iframe>';
 	}
 	
 	// call example: getSongsAPI(2010);
