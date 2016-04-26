@@ -148,7 +148,7 @@ a, a:visited {
 #register input {
 	display:block;
 	margin-bottom:5px;
-	padding-left:10px;
+	padding:0 10px;
 	width:20%;
 	height:45px;
 	border:1px solid #544741;
