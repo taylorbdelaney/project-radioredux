@@ -9,6 +9,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 <body>
+<div id="content">
 <?php
 	if (isset($_GET['year'])) {
 		error_reporting(E_ERROR);
@@ -20,7 +21,9 @@
 		displayform();
 	}
 ?>
+</div>
 </body>
+<script src='scripts/radioredux.js'></script>
 </html>
 <?php
 	// returns the spotify track url
@@ -63,7 +66,7 @@
 			$src .= ($thisone.",");
 		}
 		
-		echo '<iframe src="'.$src.'" frameborder="0" allowtransparency="true"></iframe>';
+		echo '<iframe id="player" src="'.$src.'" frameborder="0" allowtransparency="true"></iframe>';
 	}
 	
 	// call example: getSongsAPI(2010);
