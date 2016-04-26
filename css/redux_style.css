@@ -12,7 +12,7 @@ body {
 	line-height:1;
 }
 
-form input[type="text"] {
+form input[type="password"], form input[type="email"] {
 	width:150px;
 	height:20px;
 	margin-right:5px;
@@ -67,6 +67,18 @@ form select {
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+}
+.error {
+	position:fixed;
+	top:60px;
+	right:8%;
+	display:inline-block;
+	height:fit-content;
+	padding:5px;
+	background-color:#FEDD6C;
+	color:#FFF;
+	font-family:"TrebuchetMS", Helvetica, sans-serif;
+	font-size:14px;
 }
 .controls_middle {
 	display:block;

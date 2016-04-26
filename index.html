@@ -6,16 +6,17 @@
 	<title>Radio Redux</title>
 
 	<link rel="stylesheet" type="text/css" href="css/redux_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	
 </head>
 
 <body>
 
 	<div id="top">
-		<form name="loginForm">
-			<input type="text" name="email" placeholder="Email Address" />
-			<input type="text" name="pass" placeholder="Password" />
-			<input type="submit" name="login" value="LOGIN" />
+		<form name="loginForm" action="include/login.php" method="post">
+			<input type="email" id="email" name="email" placeholder="Email Address" />
+			<input type="password" id="pass" name="pass" placeholder="Password" />
+			<input type="submit" id="login" name="login" value="LOGIN" />
 			<br><p>Don't have a Radio Redux account? <u>Sign Up</u>.</p>
 		</form>
 		
@@ -61,4 +62,45 @@
 
 </body>
 
+<script>
+	$(document).ready(function() {
+	
+		/* Error msg if user doesn't fill in username or password */
+		$("#login").click(function() {
+			$(".error").hide();
+			var hasError = false;
+			var userEmail = $("#email").val();
+			var userPassword = $("#pass").val();
+			
+			if ( userEmail == "" || userPassword == "" ) {
+				$("#top").after("<span class='error'>** Please fill out login form completely **</span>");
+				hasError = true;
+			}
+			
+			if (hasError == true) {return false};
+		});
+	
+	});
+
+
+</script>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
