@@ -49,8 +49,7 @@
 		
 		$newEmail = checkEmail($emailReg, $mysqli, $action);
 		if ($newEmail == TRUE) {
-			//Fix id and registration_date
-			$insert = "INSERT INTO users (registration_date, first_name, last_name, email, password) VALUES (DATE(NOW()), '$firstName', '$lastName', '$emailReg', SHA1('$passReg'))";
+			$insert = "INSERT INTO users (registration_date, first_name, last_name, email, password) VALUES (NOW(), '$firstName', '$lastName', '$emailReg', SHA1('$passReg'))";
 			
 			if ($mysqli->query($insert) === TRUE) {
 				header('Location: ../index.html');
