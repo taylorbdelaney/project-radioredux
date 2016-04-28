@@ -1,10 +1,7 @@
 <?php
-
-	$db = 'russelzb';
-	$mysqli = new mysqli('Localhost', 'russelzb', 'RbpGD2MM', $db);
-	if ($mysqli->connect_error) {
-		die('Connect Error (' . $mysqli->connect_errno . '): ' . $mysqli->connect_error);
-	}
+	include('dbconn.php');
+	
+	$dbc = connect_to_db();
 	
 	$action = "";
 	
@@ -15,14 +12,14 @@
 		$userEmail = $_POST['email'];
 		$userPassword = $_POST['pass'];
 	
-		$validEmail = checkEmail($userEmail, $mysqli, $action);
+		$validEmail = checkEmail($userEmail, $dbc, $action);
 	
 		if ($validEmail = TRUE) {
-			$validPass = checkPass($userPassword, $userEmail, $mysqli);
+			$validPass = checkPass($userPassword, $dbc, $userEmail);
 		
 			if ($validPass = TRUE) {
 				$userq = "SELECT * FROM users WHERE email = '$userEmail'";
-				$result = $mysqli->query($userq);
+				$result = perform_query($dbc, $userq);
 			
 				if ($result->num_rows == 0) {
 					die("Bad query $sql");
@@ -33,7 +30,7 @@
 				}
 				$jsonUser = json_encode($user_data);
 			
-				header('Location: ../index.html');
+				header('Location: ../index.php');
 			}
 		}
 	}
@@ -47,12 +44,12 @@
 		$emailReg = $_POST['emailReg'];
 		$passReg = $_POST['passwordReg'];
 		
-		$newEmail = checkEmail($emailReg, $mysqli, $action);
+		$newEmail = checkEmail($emailReg, $dbc, $action);
 		if ($newEmail == TRUE) {
 			$insert = "INSERT INTO users (registration_date, first_name, last_name, email, password) VALUES (NOW(), '$firstName', '$lastName', '$emailReg', SHA1('$passReg'))";
 			
-			if ($mysqli->query($insert) === TRUE) {
-				header('Location: ../index.html');
+			if ($dbc->query($insert) === TRUE) {
+				header('Location: ../index.php');
 			} else {
 				echo "Error: $insert <br>" . $mysqli->error;
 			}
@@ -60,13 +57,11 @@
 	
 	}
 
-
-
-	$mysqli->close();
+	disconnect_from_db( $dbc, $result );
 	
-	function checkEmail($userEmail, $mysqli, $action) {
+	function checkEmail($userEmail, $dbc, $action) {
 		$emailq = "SELECT email FROM users WHERE email = '$userEmail'";
-		$result = $mysqli->query($emailq);
+		$result = perform_query($dbc, $emailq);
 		
 		if ($action == 'login') {
 			if ($result->num_rows !== 1) {
@@ -82,12 +77,12 @@
 			}
 		}
 	}
-	function checkPass($userPassword, $userEmail, $mysqli) {
+	function checkPass($userPassword, $dbc, $userEmail) {
 		$passq = "SELECT password FROM users WHERE email = '$userEmail' AND password = SHA1('$userPassword')";
-		$result = $mysqli->query($passq);
+		$result = perform_query($dbc, $passq);
 		
 		if ($result->num_rows !== 1) {
-			die("Incorrect password");
+			die("Incorrect password<br><a href='../index.php'>Return to homepage</a>");
 		} else {
 			return $passwordCheck = TRUE;
 		}
