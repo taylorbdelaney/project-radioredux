@@ -1,5 +1,6 @@
 <?php
-	include('include/dbconn.php');
+session_start();
+include('include/dbconn.php');
 ?>
 <!DOCTYPE html>
 
@@ -17,12 +18,22 @@
 <body>
 
 	<div id="top">
-		<form id="loginForm" name="loginForm" action="include/login.php" method="post">
-			<input type="email" id="email" name="email" placeholder="Email Address" />
-			<input type="password" id="pass" name="pass" placeholder="Password" />
-			<input type="submit" id="login" name="login" value="LOGIN" />
-			<br><a href="account/register.html" target="_self">Don't have a Radio Redux account? <u>Sign Up</u>.</a>
-		</form>
+		<div id="showLogin">
+			<form id="loginForm" name="loginForm" action="include/login.php" method="post">
+				<input type="email" id="email" name="email" placeholder="Email Address" />
+				<input type="password" id="pass" name="pass" placeholder="Password" />
+				<input type="submit" id="login" name="login" value="LOGIN" />
+				<br><a href="account/register.php" target="_self">Don't have a Radio Redux account? <u>Sign Up</u>.</a>
+			</form>
+		</div>
+		<div id="showUser">
+			<?php
+				if(isset($_SESSION['user'])!=""){
+					echo "There is a user logged in!";
+					echo $_SESSION['user'];
+				}
+			?>
+		</div>
 		
 	</div>
 	
@@ -57,7 +68,7 @@
 			
 		</div>
 		<div id="controls">
-			<div class="controls_middle">
+			<!-- <div class="controls_middle">
 				<div class="prevbutton">
 					<img src="img/btn_left.png" alt="Previous song button">
 				</div>
@@ -67,7 +78,7 @@
 				<div class="nextbutton">
 					<img src="img/btn_right.png" alt="Next song button">
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<div id="controlsBottom" class="center">
 		</div>
