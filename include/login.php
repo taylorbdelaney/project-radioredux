@@ -1,7 +1,7 @@
 <?php
 
-	$db = 'delanetc';
-	$mysqli = new mysqli('Localhost', 'delanetc', 'lo0per1293', $db);
+	$db = 'russelzb';
+	$mysqli = new mysqli('Localhost', 'russelzb', 'RbpGD2MM', $db);
 	if ($mysqli->connect_error) {
 		die('Connect Error (' . $mysqli->connect_errno . '): ' . $mysqli->connect_error);
 	}
@@ -33,7 +33,7 @@
 				}
 				$jsonUser = json_encode($user_data);
 			
-				header('Location: http://cscilab.bc.edu/~delanetc/radioRedux/index.html');
+				header('Location: ../index.html');
 			}
 		}
 	}
