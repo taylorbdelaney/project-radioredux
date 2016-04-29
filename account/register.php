@@ -33,7 +33,7 @@ if (isset($_POST['submitReg'])) {
 <head>
 	<meta charset="utf-8" />
 	<title>Radio Redux – Register for Account</title>
-	
+	<link rel="icon" type="image/png" href="../img/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="../css/redux_style.css">
 </head>
 
