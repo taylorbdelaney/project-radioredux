@@ -23,12 +23,12 @@
 					die("Bad query $sql");
 				}
 				$user_data = array();
-				while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-					$user_data[] = $row['id'];
+				while ($row = mysqli_fetch_array($result)) {
+					$user_data[] = $row;
 				}
 				
 				$_SESSION['user'] = $user_data[0];
-			
+
 				header('Location: ../index.php');
 			}
 		}

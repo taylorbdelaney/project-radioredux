@@ -9,8 +9,10 @@ include('include/radioredux.php');
 <head>
 	<meta charset="utf-8" />
 	<title>Radio Redux</title>
+	
 	<link rel="icon" type="image/png" href="img/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="css/redux_style.css">
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src='scripts/radioredux.js'></script>
 	
@@ -19,23 +21,17 @@ include('include/radioredux.php');
 <body>
 
 	<div id="top">
-		<div id="showLogin">
-			<form id="loginForm" name="loginForm" action="include/login.php" method="post">
-				<input type="email" id="email" name="email" placeholder="Email Address" />
-				<input type="password" id="pass" name="pass" placeholder="Password" />
-				<input type="submit" id="login" name="login" value="LOGIN" />
-				<br><a href="account/register.php" target="_self">Don't have a Radio Redux account? <u>Sign Up</u>.</a>
-			</form>
-		</div>
-		<div id="showUser">
-			<?php
-				if(isset($_SESSION['user'])!=""){
-					echo "There is a user logged in!";
-					echo $_SESSION['user'];
-				}
-			?>
-		</div>
-		
+		<?php
+			if(isset($_SESSION['user']) == "") {
+				echo "<div id='showLogin'>";
+				showLogin();
+				echo "</div>";
+			} else if (isset($_SESSION['user'])!== "") {
+				echo "<div id='showUser'>";
+				userInfo();
+				echo "</div>";
+			}
+		?>		
 	</div>
 	
 	<div id="main">
@@ -43,7 +39,7 @@ include('include/radioredux.php');
 		
 		<div id="musicContainer" class="center">
 			<form id="yearForm" name="yearForm" method="get">
-				<!-- Note: add in loop / db json link for years... also is dropdown the best way to do this? -->
+
 				<select name="year" id="yrselect">
 					<?php
 						echo "<option value=\"na\">Year</option>";
@@ -98,7 +94,7 @@ include('include/radioredux.php');
 <script>
 	$(document).ready(function() {
 	
-		/* Error msg if user doesn't fill in username or password */
+		// Error msg if user doesn't fill in username or password
 		$("#login").click(function() {
 			$(".error").hide();
 			var hasError = false;
@@ -112,10 +108,35 @@ include('include/radioredux.php');
 			
 			if (hasError == true) {return false};
 		});
-	
+			
 	});
 
 
 </script>
 
 </html>
+<?php
+
+	// returns logged in user information
+	function showLogin() {
+		echo "<form id='loginForm' name='loginForm' action='include/login.php' method='post'>";
+		echo "<input type='email' id='email' name='email' placeholder='Email Address' />";
+		echo "<input type='password' id='pass' name='pass' placeholder='Password' />";
+		echo "<input type='submit' id='login' name='login' value='LOGIN' />";
+		echo "<br><a href='account/register.php' target='_self'>Don't have a Radio Redux account? <u>Sign Up</u>.</a>";
+		echo "</form>";
+	}
+	
+	function userInfo() {
+
+		$id = $_SESSION['user']['id'];
+		$firstName = $_SESSION['user']['first_name'];
+		$lastName = $_SESSION['user']['last_name'];
+		$fullName = $firstName . " " . $lastName;
+		
+		echo "<span>" . $fullName . "</span>";
+		echo "<form name='logoutUser' id='logoutUser' action='account/logout.php' method='get'>";
+		echo "<input type='submit' name='logout' value='Logout' />";
+		echo "</form>";
+	}
+?>

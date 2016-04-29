@@ -72,9 +72,18 @@ a, a:visited {
 	display:auto;
 }
 #showUser {
-	display:none;
+	display:auto;
+	margin:15px 35px 0 0;
+	display:block;
+	color:#fffef5;
+	font-size:14px;
+	text-align:right;
 }
-#top form {
+#showUser span, #showUser form {
+	display:inline-block;
+	margin-left:10px;
+}
+#showLogin form {
 	margin:15px 35px 0 0;
 	display:block;
 	color: #FFFEF5;
@@ -97,7 +106,7 @@ a, a:visited {
 	color:#BBBBBB;
 
 }
-#loginForm input[type="submit"] {
+#loginForm input[type="submit"], #logoutUser input[type="submit"] {
 	vertical-align:top;
 	width:50px;
 	height:20px;
