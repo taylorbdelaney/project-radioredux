@@ -57,8 +57,10 @@ include('include/radioredux.php');
 				if (isset($_GET['year'])) {
 					error_reporting(E_ERROR);
 					$yr = $_GET['year'];
-					$toPlay = getSongsDB(intval($yr));
+					$plist = getAllDB($yr);
+					$toPlay = getSongsFromRes($plist);
 					embedit($yr,$toPlay);
+					showPlaylist($plist);
 				}
 				else {
 					//displayform();

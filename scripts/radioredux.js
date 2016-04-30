@@ -4,4 +4,6 @@ $(document).ready(function() {
 			$('#yearForm').submit();
 		}
 	});
+	
+	$('#tbh').width($('#tb').width()+30);
 });

@@ -213,3 +213,45 @@ a, a:visited {
 	background-color:#544741;
 
 }
+
+div.tableholder {
+	height: 600px;
+	overflow-y: scroll;
+	margin: auto;
+	
+}
+
+table {
+	margin: auto;
+	color: #544741;
+}
+
+table td {
+	max-width: 300px;
+	padding: 4px;
+}
+
+table tr:hover {
+	background-color: #ffffff;
+}
+
+td.ranking {
+	text-align: center;
+}
+
+div ::-webkit-scrollbar {
+	width: 12px;
+}
+
+div ::-webkit-scrollbar-track {
+	background-color: #FEDD6C;
+	border-radius: 10px;
+}
+
+div ::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #544741;
+}
+
+
+
