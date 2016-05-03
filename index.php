@@ -77,7 +77,7 @@ include('include/radioredux.php');
             <div class="prevbutton">
 				<button type='button' id='preferences' name='preferences'>Add to Preferences</button>
 				<form id="preferencesForm">
-					<input type='button' id='loadPreferences' name='loadPreferences' value="Give me my faves">
+					<input type='button' id='loadPreferences' name='loadPreferences' value="Give Me My Faves">
 				</form>
 		   </div>
 			<table id="fav_table">
@@ -114,16 +114,15 @@ include('include/radioredux.php');
 	$(document).ready(function() {
 		$("#loadPreferences").click(function() {
 			//fill favorites array
-			alert("loading preferences...");
+			//alert("loading preferences...");
 			var current_user = parseInt($('#userid2').text());				//gets current user of session
 			$('#yrselect').empty(); 								//empty current select to fill with pref's.
-			alert("current user: " + current_user);
-			alert("select empty?");
+			//alert("current user: " + current_user);
+			//alert("select empty?");
 			$.getJSON("selectFavorites.php", function (data) {  //for each song_year in pref db table...
 				$.each(data, function (i, attr) {
 					var user_id = attr.user_id;
 					var song_year = attr.song_year;
-					alert(user_id + " " + current_user);
 					if(user_id == current_user){
 						//make new option with user_id and song_year
 						var option = $('<option></option>').attr("value", song_year).text(song_year);
@@ -140,7 +139,7 @@ include('include/radioredux.php');
 
 				});
 			}).done(function(data){ 
-				alert("loading favorites finished");
+				//alert("loading favorites finished");
 			});
 		});
 
@@ -163,10 +162,10 @@ include('include/radioredux.php');
 		$("#preferences").click(function() {
 			var showLogin = document.getElementById("showLogin");
 			if(showLogin){ // if loginForm exists, we are not logged in. Therefore show error
-				alert("Please login first");
+				alert("You must log in before modifying your preferences");
 			}
 			else{
-				alert("You are successfully logged in");
+				console.log("You are successfully logged in");
 				//get year
 				var yearElement = document.getElementById("yrselect");
 				var yearStr 	= yearElement.options[yearElement.selectedIndex].text;
@@ -183,7 +182,7 @@ include('include/radioredux.php');
 						dataType: 'json',
 								encode :true
 					}).done(function(data){ //cleanup form (by hiding?)
-								alert("all done");
+								//alert("all done");
 							});
 					event.preventDefault();
 			}
