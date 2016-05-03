@@ -30,6 +30,9 @@ include('include/radioredux.php');
 				echo "<div id='showUser'>";
 				userInfo();
 				echo "</div>";
+				//this bit may be unnecessary
+				$id = $_SESSION["user"]["id"];
+				echo "<p id='userid2' style='visibility: hidden'> $id </p>";
 			}
 		?>		
 	</div>
@@ -43,6 +46,8 @@ include('include/radioredux.php');
 				<select name="year" id="yrselect">
 					<?php
 						echo "<option value=\"na\">Year</option>";
+						//$favorites_array = getFavorites();
+						//echo "<option value=\"\">Favorites</option>";
 						$randyear = rand(1960, 2015);
 						echo "<option value=\"$randyear\">Random</option>";
 						foreach (range(2015, 1960) as $thisyear) {
@@ -69,6 +74,18 @@ include('include/radioredux.php');
 			
 		</div>
 		<div id="controls">
+            <div class="prevbutton">
+				<button type='button' id='preferences' name='preferences'>Add to Preferences</button>
+				<form id="preferencesForm">
+					<input type='button' id='loadPreferences' name='loadPreferences' value="Give me my faves">
+				</form>
+		   </div>
+			<table id="fav_table">
+				<tr>
+                <th>User_Id</th>
+                <th>Song_Year</th>
+				</tr>
+			</table>	
 			<!-- <div class="controls_middle">
 				<div class="prevbutton">
 					<img src="img/btn_left.png" alt="Previous song button">
@@ -87,7 +104,7 @@ include('include/radioredux.php');
 	</div>
 	
 	<div id="bottom">
-	
+
 	</div>
 
 
@@ -95,7 +112,38 @@ include('include/radioredux.php');
 
 <script>
 	$(document).ready(function() {
-	
+		$("#loadPreferences").click(function() {
+			//fill favorites array
+			alert("loading preferences...");
+			var current_user = parseInt($('#userid2').text());				//gets current user of session
+			$('#yrselect').empty(); 								//empty current select to fill with pref's.
+			alert("current user: " + current_user);
+			alert("select empty?");
+			$.getJSON("selectFavorites.php", function (data) {  //for each song_year in pref db table...
+				$.each(data, function (i, attr) {
+					var user_id = attr.user_id;
+					var song_year = attr.song_year;
+					alert(user_id + " " + current_user);
+					if(user_id == current_user){
+						//make new option with user_id and song_year
+						var option = $('<option></option>').attr("value", song_year).text(song_year);
+						$('#yrselect').append(option);
+					}
+					//append to table unused user_id's and years for testing purposes
+					/*else{
+						$("#fav_table").append("<tr><td>" + user_id + 
+							"</td><td>" + song_year +
+							"</td></tr>");	
+					}*/
+
+					
+
+				});
+			}).done(function(data){ 
+				alert("loading favorites finished");
+			});
+		});
+
 		// Error msg if user doesn't fill in username or password
 		$("#login").click(function() {
 			$(".error").hide();
@@ -110,6 +158,36 @@ include('include/radioredux.php');
 			
 			if (hasError == true) {return false};
 		});
+
+		//insert user_id and year into user's preferences
+		$("#preferences").click(function() {
+			var showLogin = document.getElementById("showLogin");
+			if(showLogin){ // if loginForm exists, we are not logged in. Therefore show error
+				alert("Please login first");
+			}
+			else{
+				alert("You are successfully logged in");
+				//get year
+				var yearElement = document.getElementById("yrselect");
+				var yearStr 	= yearElement.options[yearElement.selectedIndex].text;
+				var id = document.getElementById("userid1");
+				var idStr = id.innerHTML;
+				var formData = {
+					'year' : yearStr,
+					'id'   : idStr
+				};
+				$.ajax({
+						type 	: 'POST',
+						url		: 'preferences.php',
+						data	: formData,
+						dataType: 'json',
+								encode :true
+					}).done(function(data){ //cleanup form (by hiding?)
+								alert("all done");
+							});
+					event.preventDefault();
+			}
+		});
 			
 	});
 
@@ -121,6 +199,7 @@ include('include/radioredux.php');
 
 	// returns logged in user information
 	function showLogin() {
+		
 		echo "<form id='loginForm' name='loginForm' action='include/login.php' method='post'>";
 		echo "<input type='email' id='email' name='email' placeholder='Email Address' />";
 		echo "<input type='password' id='pass' name='pass' placeholder='Password' />";
@@ -130,7 +209,7 @@ include('include/radioredux.php');
 	}
 	
 	function userInfo() {
-
+		
 		$id = $_SESSION['user']['id'];
 		$firstName = $_SESSION['user']['first_name'];
 		$lastName = $_SESSION['user']['last_name'];
@@ -140,5 +219,8 @@ include('include/radioredux.php');
 		echo "<form name='logoutUser' id='logoutUser' action='account/logout.php' method='get'>";
 		echo "<input type='submit' name='logout' value='Logout' />";
 		echo "</form>";
+		//for preferences insertion later on
+		echo "<p id='userid1' style='visibility: hidden'> $id </p>";
 	}
+	
 ?>
