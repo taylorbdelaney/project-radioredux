@@ -106,7 +106,7 @@ a, a:visited {
 	color:#BBBBBB;
 
 }
-#loginForm input[type="submit"], #logoutUser input[type="submit"] {
+#loginForm input[type="submit"], #logoutUser input[type="submit"], #admnp, #hbut, #emsend {
 	vertical-align:top;
 	width:50px;
 	height:20px;
@@ -122,6 +122,11 @@ a, a:visited {
 	color:#554741;
 	letter-spacing:0px;
 	text-shadow: 0px 1px 0px rgba(255,254,255,0.50);
+}
+
+#admnp, #emsend {
+	width: 80px;
+	margin-left: 4px;
 }
 
 #main {
@@ -253,5 +258,27 @@ div ::-webkit-scrollbar-thumb {
 	background-color: #544741;
 }
 
+#tablecontent {
+	padding-top: 20px;
+	clear: both;
+	background-color: #544741;
+	padding-bottom: 20px;
+}
 
+#admntable {
+	background-color: #FEDD6C;
+}
 
+#admntable td {
+	max-width: 200px;
+}
+
+#gohomeb {
+	margin-left: 20px;
+}
+
+#donemessage {
+	color: #FEDD6C;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}

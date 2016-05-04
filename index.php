@@ -203,7 +203,7 @@ include('include/radioredux.php');
 		echo "<input type='email' id='email' name='email' placeholder='Email Address' />";
 		echo "<input type='password' id='pass' name='pass' placeholder='Password' />";
 		echo "<input type='submit' id='login' name='login' value='LOGIN' />";
-		echo "<br><a href='account/register.php' target='_self'>Don't have a Radio Redux account? <u>Sign Up</u>.</a>";
+		echo "<br>Don't have a Radio Redux account? <a href='account/register.php' target='_self'><u>Sign Up</u>.</a>";
 		echo "</form>";
 	}
 	
@@ -218,6 +218,12 @@ include('include/radioredux.php');
 		echo "<form name='logoutUser' id='logoutUser' action='account/logout.php' method='get'>";
 		echo "<input type='submit' name='logout' value='Logout' />";
 		echo "</form>";
+		
+		// for admins
+		if (in_array($id, array(4,7,11))) {
+			echo "<a href=\"admin.php\"><button id=\"admnp\" type=\"button\">Admin Page</button></a>";
+		}
+		
 		//for preferences insertion later on
 		echo "<p id='userid1' style='visibility: hidden'> $id </p>";
 	}
