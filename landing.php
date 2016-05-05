@@ -4,19 +4,22 @@ include('include/dbconn.php');
 include('include/radioredux.php');
 ?>
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Radio Redux – Homepage</title>
+	<title>Radio Redux</title>
 	
 	<link rel="icon" type="image/png" href="img/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="css/redux_style.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src='scripts/radioredux.js'></script>
+	
 </head>
 
 <body>
+
 	<div id="top">
 		<?php
 			if(isset($_SESSION['user']) == "") {
@@ -31,52 +34,68 @@ include('include/radioredux.php');
 				$id = $_SESSION["user"]["id"];
 				echo "<p id='userid2' style='visibility: hidden'> $id </p>";
 			}
-		?>
+		?>		
 	</div>
+	
 	<div id="main">
 		<img class="center" src="img/banner.png" alt="Radio Redux">
 		
 		<div id="musicContainer" class="center">
-			<div id="statement">
-				<span id="state1">Have you ever thought,</span>
-				<span id="state2">"Gee, I'd love to listen to the radio like it were 2003?"</span>
-				<span id="state3"><b>No? Good.</b><br>because 2004 is when the real magic happens.</span>
-			</div>
+			<form id="yearForm" name="yearForm" method="get">
+
+				<select name="year" id="yrselect">
+					<?php
+						echo "<option value=\"na\">Year</option>";
+						//$favorites_array = getFavorites();
+						//echo "<option value=\"\">Favorites</option>";
+						$randyear = rand(1960, 2015);
+						echo "<option value=\"$randyear\">Random</option>";
+						foreach (range(2015, 1960) as $thisyear) {
+							$pickit = ($_GET['year']==$thisyear) ? "selected" : "";
+							echo "<option value=\"$thisyear\" $pickit>$thisyear</option>";
+						}
+					?>
+				</select>
+			</form>
+			
+			<?php
+				if (isset($_GET['year'])) {
+					error_reporting(E_ERROR);
+					$yr = $_GET['year'];
+					$plist = getAllDB($yr);
+					$toPlay = getSongsFromRes($plist);
+					embedit($yr,$toPlay);
+					showPlaylist($plist);
+				}
+				else {
+					//displayform();
+				}
+			?>
+			
 		</div>
 		<div id="controls">
-			<div id="problem">
-				<span class="prob1">THE PROBLEM:</span>
-				<span>Many humans on this earth are dissatisfied with their present state of living and enjoy reminiscing
-				about their younger years, when everything was simpler, easier, happier, better.<br><br>We utilize social media
-				for visual nostalgia triggers, and we've even set aside a day of the week for "throwbacks," yet our <span class="prob1"> SONIC
-				NOSTALGIA</span> lacks a customizable and centralized source wherein we can escape the hell of the present
-				and keep on living in the past.</span>
-			</div>
-	</div>
-		<div id="controlsBottom" class="center">
-			<div id="solution">
-				<span class="sol1">THE SOLUTION:</span>
-				<span>Go ahead, pick a year.</span>
-				<form id="yearForm" name="yearForm" method="get">
-
-					<select name="year" id="yrselect">
-						<?php
-							echo "<option value=\"na\">Year</option>";
-							//$favorites_array = getFavorites();
-							//echo "<option value=\"\">Favorites</option>";
-							$randyear = rand(1960, 2015);
-							echo "<option value=\"$randyear\">Random</option>";
-							foreach (range(2015, 1960) as $thisyear) {
-								$pickit = ($_GET['year']==$thisyear) ? "selected" : "";
-								echo "<option value=\"$thisyear\" $pickit>$thisyear</option>";
-							}
-						?>
-					</select>
+            <div class="prevbutton">
+				<button type='button' id='preferences' name='preferences'>Add to Preferences</button>
+				<form id="preferencesForm">
+					<input type='button' id='loadPreferences' name='loadPreferences' value="Give Me My Faves">
 				</form>
-			</div>
+		   </div>
+			<table id="fav_table">
+				<tr>
+                <th>User_Id</th>
+                <th>Song_Year</th>
+				</tr>
+			</table>	
 		</div>
-	<div id="bottom">
+		<div id="controlsBottom" class="center">
+		</div>
+	
 	</div>
+	
+	<div id="bottom">
+
+	</div>
+
 
 </body>
 
@@ -126,15 +145,6 @@ include('include/radioredux.php');
 			}
 			
 			if (hasError == true) {return false};
-		});
-		
-		//Redirect
-		$("#yrselect").change(function() {
-			if ($("#yrselect").val() != "na") {
-				var year = $("#yrselect").val();
-				var url = "http://cscilab.bc.edu/~delanetc/radioRedux/landing.php?year=" + year;
-				$(location).attr('href', url);
-			}
 		});
 
 		//insert user_id and year into user's preferences
