@@ -2,7 +2,7 @@
 		$dbc = @mysqli_connect( "localhost", "russelzb", "RbpGD2MM", "russelzb") or
 			die( "Connect failed: couldn't open preferences ". mysqli_connect_error() );
 
-		$query = "select user_id, song_year from preferences";
+		$query = "select * from preferences";
 		$result = mysqli_query($dbc,$query);
 		if ( mysqli_num_rows( $result ) == 0 ) {
 			die("bad query $query");

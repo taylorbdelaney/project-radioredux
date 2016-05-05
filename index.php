@@ -82,6 +82,8 @@ include('include/radioredux.php');
 
 <script>
 	$(document).ready(function() {
+		$("#controlsBottom").css("height", "fit-content");
+		
 		$("#loadPreferences").click(function() {
 			//fill favorites array
 			//alert("loading preferences...");

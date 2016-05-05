@@ -74,20 +74,15 @@ include('include/radioredux.php');
 			
 		</div>
 		<div id="controls">
-            <div class="prevbutton">
-				<button type='button' id='preferences' name='preferences'>Add to Preferences</button>
+            <div class="favbuttons center">
+				<button type='button' id='preferences' name='preferences'>Add Year to Favorites</button>
 				<form id="preferencesForm">
 					<input type='button' id='loadPreferences' name='loadPreferences' value="Give Me My Faves">
 				</form>
-		   </div>
-			<table id="fav_table">
-				<tr>
-                <th>User_Id</th>
-                <th>Song_Year</th>
-				</tr>
-			</table>	
+		   </div>	
 		</div>
 		<div id="controlsBottom" class="center">
+
 		</div>
 	
 	</div>
@@ -123,9 +118,6 @@ include('include/radioredux.php');
 							"</td><td>" + song_year +
 							"</td></tr>");	
 					}*/
-
-					
-
 				});
 			}).done(function(data){ 
 				//alert("loading favorites finished");
