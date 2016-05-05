@@ -56,7 +56,7 @@ include('include/radioredux.php');
 		<div id="controlsBottom" class="center">
 			<div id="solution">
 				<span class="sol1">THE SOLUTION:</span>
-				<span>Go ahead, pick a year.</span>
+				<span>Join us. Go ahead, pick a year.</span>
 				<form id="yearForm" name="yearForm" method="get">
 
 					<select name="year" id="yrselect">
@@ -184,7 +184,7 @@ include('include/radioredux.php');
 		echo "<input type='email' id='email' name='email' placeholder='Email Address' />";
 		echo "<input type='password' id='pass' name='pass' placeholder='Password' />";
 		echo "<input type='submit' id='login' name='login' value='LOGIN' />";
-		echo "<br>Don't have a Radio Redux account? <a href='account/register.php' target='_self'><u>Sign Up</u>.</a>";
+		echo "<br><a href='account/register.php' target='_self'>Don't have a Radio Redux account? <u>Sign Up</u>.</a>";
 		echo "</form>";
 	}
 	
