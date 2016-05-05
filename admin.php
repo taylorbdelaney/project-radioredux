@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("include/dbconn.php");
 ?>
 <!DOCTYPE html>
@@ -10,6 +11,10 @@ include("include/dbconn.php");
 	<link rel="stylesheet" type="text/css" href="css/redux_style.css">
 </head>
 <body>
+<div id="top">
+</div>
+<div id="main">
+<a href="http://cscilab.bc.edu/~delanetc/radioRedux"><img class="center" src="img/banner.png" alt="Radio Redux"></a>
 <div id="tablecontent">
 <?php
 	showTable();
@@ -25,6 +30,8 @@ include("include/dbconn.php");
 </form>
 </div>
 <br>
+</div>
+<div id="bottom"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="scripts/adminpage.js"></script>
 </body>

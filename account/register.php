@@ -44,7 +44,7 @@ if (isset($_POST['submitReg'])) {
 	
 	</div>
 	<div id="main">
-		<img class="center" src="../img/banner.png" alt="Radio Redux">
+		<a href="http://cscilab.bc.edu/~delanetc/radioRedux"><img class="center" src="../img/banner.png" alt="Radio Redux"></a>
 		
 		<div id="musicContainer" class="center">
 			<form name="register" id="register" class="center" method="post">
