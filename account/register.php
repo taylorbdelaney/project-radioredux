@@ -17,6 +17,8 @@ if (isset($_POST['submitReg'])) {
 			$insert = "INSERT INTO users (registration_date, first_name, last_name, email, password) VALUES (NOW(), '$firstName', '$lastName', '$emailReg', SHA1('$passReg'))";
 			
 			if ($dbc->query($insert) === TRUE) {
+				$msg = "Hello $firstName $lastName and welcome to the wonderful world of Radio Redux,\n\nYou can now login to your account using this e-mail address and the password: $passReg.\n\nNow that your account is active feel free to customize your RadioRedux experience by adding favorite years!\n\n\nBest,\nThe RadioRedux Team";
+				mail($emailReg, "Welcome to RadioRedux", $msg);
 				header('Location: ../index.php');
 			} else {
 				echo "Error: $insert <br>" . $dbc->error;
@@ -36,6 +38,8 @@ if (isset($_POST['submitReg'])) {
 	
 	<link rel="icon" type="image/png" href="../img/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="../css/redux_style.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -58,13 +62,22 @@ if (isset($_POST['submitReg'])) {
 			</form>
 		
 		</div>
+		<div id="controls">
+		</div>
+		<div id="controlsBottom" class="center">
+		</div>
 	</div>
 	<div id="bottom">
 	
 	</div>
 
 </body>
-
+<script>
+	$(document).ready(function() {
+		$("#controls").css("height", "150px");
+	
+	});
+</script>
 
 </html>
 <?php
