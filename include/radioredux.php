@@ -39,7 +39,7 @@
 			$src .= ($thisone.",");
 		}
 		
-		echo '<iframe id="player" width="640" height="720" src="'.$src.'&view=coverart" frameborder="0" allowtransparency="true"></iframe>';
+		echo '<iframe id="player" width="400" height="480" src="'.$src.'&view=coverart" frameborder="0" allowtransparency="true"></iframe>';
 	}
 	
 	// call example: getSongsAPI(2010);
@@ -126,7 +126,7 @@
 	}
 	
 	function showPlaylist($lst) {
-		echo "<br><br><div class=\"tableholder\" id=\"tbh\"><table id=\"tb\"><tr><th>Title</th><th>Artist</th><th>Rank</th></tr>";
+		echo "<div class=\"tableholder\" id=\"tbh\"><table id=\"tb\"><tr><th>Title</th><th>Artist</th><th>Rank</th></tr>";
 		foreach ($lst as $val) {
 			echo "<tr><td>".$val['title']."</td><td>".$val['artist']."</td><td class=\"ranking\">".$val['rank']."</td></tr>";
 		}
